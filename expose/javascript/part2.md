@@ -27,3 +27,29 @@
     - C. student.greeting();
     - D. student['Favorite Teacher'].name
     - E. student.courseLoad[0]
+
+13. - A. This outputs '32'. This is because a string came first, so + is seen as concatenation. 2 is converted into a string and we get '32'.
+    - B. This outputs 1. This is because there is no string operator for -, so '3' is converted into an integer and 3-2 = 1.
+    - C. This outputs 3. Null is converted into an integer for addition, and null turns into 0.
+    - D. This outputs '3null'. Addition signals concatenation for strings, and because '3' is a string, null is converted into 'null' and it is concatenated.
+    - E. This outputs 4. True is converted into 1 for addition and 1 + 3 = 4.
+    - F. This outputs 0. False and null both convert into 0 and 0 + 0 = 0.
+    - G. This outputs '3undefined'. Because '3' is a string, this signals concatenation, so undefined is converted into 'undefined' and the concatenation gives '3undefined'.
+    - H. This outputs NaN. This is because there is no string operation with -, so undefined has to convert into an integer. But undefined converts to NaN whenever it tries to convert into an integer, so the total output is NaN.
+
+14. - A. This outputs true. 1 is converted into '1' and '2' is greater than '1' in Unicode.
+    - B. This outputs false. '2' is greater than '1' in Unicode so computation stops there.
+    - C. This outputs true. '2' is converted to 2 and 2 == 2 is true.
+    - D. This outputs false. Strict equality sees a string and integer and these aren't the same, so this is false.
+    - E. This outputs false. True is converted to 1 and 1 == 2 is false.
+    - F. This outputs true. Boolean(2) is true because 2 is not 0, and strict equality sees two booleans that are both true, so this is true.
+
+15. _==_ is a regular equality check. When there are operands of different types, _==_ will convert them into numbers. _===_ on the other hand is a strict equality operator. It will check the types of the operands and if the types are different, it will return false.
+
+16. Found in the part2-question16.js file.
+
+17. The result is [2,4,6]. The function is called with arguments [1,2,3] and doSomething. A new array is created. On each element of the argument, callback is called with the element of the argument. Callback is the function doSomething, callback returns each element times 2. That number is pushed into the new array. The array is returned once the for loop is done.
+
+18. Found in the part2-question18.js file.
+
+19. This will print 1 4 3 2. 1 prints first because it is first. The 2 is then set on a delay for one second. The three has a delay of 0 seconds, but is waiting for the event cycle. 4 then prints, and then 3. Finally, 2 prints after the delay.
